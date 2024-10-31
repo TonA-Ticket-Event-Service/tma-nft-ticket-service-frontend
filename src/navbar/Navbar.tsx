@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav style={{
             display: location.pathname !== '/' ? 'flex' : 'block',
-            justifyContent: 'space-between',
+            justifyContent: location.pathname !== '/' ? 'space-between' : 'space-around',
             alignItems: 'center',
             padding: '10px'
         }}>
