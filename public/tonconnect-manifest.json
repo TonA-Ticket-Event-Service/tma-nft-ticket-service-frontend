@@ -1,5 +1,5 @@
 {
-  "url": "https://tma-nft-ticket-service-frontend.vercel.app/",
-  "iconUrl": "https://storage.herewallet.app/logo.png",
-  "name": "NFT HOT Example"
+  "url": "http://localhost:5173/",
+  "name": "NFT HOT Example",
+  "description": "A dApp for connecting to TON Wallet"
 }
