@@ -1,13 +1,14 @@
 import './App.css'
 
-import {WalletConnector} from "./wallet-connector/WalletConnector.tsx";
+import Navbar from "./navbar/Navbar.tsx";
+import HomePage from "./homePage/HomePage.tsx";
 
 function App() {
 
     return (
         <>
-            <h1>TWA + Vite + React</h1>
-            <WalletConnector/>
+            <Navbar/>
+            <HomePage/>
         </>
     )
 }
