@@ -1,6 +1,5 @@
 import {
     TonConnectButton,
-    TonConnectUIProvider,
 } from "@tonconnect/ui-react";
 import {FC} from "react";
 
