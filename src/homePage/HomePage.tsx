@@ -1,15 +1,19 @@
 import WebApp from '@twa-dev/sdk'
+import Navbar from "../navbar/Navbar.tsx";
+import {useNavigate} from "react-router-dom";
 
 const HomePage = () => {
+    const navigate = useNavigate();
     const handleCreateTicket = () => {
         WebApp.showAlert('Simulate create')
     };
 
     const handleWatchTicket = () => {
-        WebApp.showAlert('Simulate show all tickets')
+        navigate('/ticket');
     };
     return (
         <>
+            <Navbar/>
             <h1>NFT HOT EXAMPLE</h1>
             <span>You can choose</span>
             <div style={{
