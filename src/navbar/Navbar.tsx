@@ -11,19 +11,9 @@ const Navbar = () => {
         }
     };
     return (
-        <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', padding: '10px'}}>
+        <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px'}}>
             {location.pathname !== '/' && (
-                <button
-                    style={{
-                        padding: '10px 20px',
-                        backgroundColor: '#007bff',
-                        color: 'white',
-                        border: 'none',
-                        cursor: 'pointer',
-                        borderRadius: '5px'
-                    }}
-                    onClick={handleHomeClick}
-                >
+                <button className="button-32" style={{width: 'max-content'}} onClick={handleHomeClick}>
                     Home
                 </button>
             )}

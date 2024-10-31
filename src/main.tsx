@@ -4,14 +4,14 @@ import './index.css'
 import {BrowserRouter} from 'react-router-dom';
 
 import WebApp from '@twa-dev/sdk'
-import Routers from "./routers/Routers.tsx";
+import App from "./App.tsx";
 
 WebApp.ready();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>
-            <Routers/>
+            <App/>
         </BrowserRouter>
     </React.StrictMode>
 ,
