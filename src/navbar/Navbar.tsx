@@ -11,7 +11,12 @@ const Navbar = () => {
         }
     };
     return (
-        <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px'}}>
+        <nav style={{
+            display: location.pathname !== '/' ? 'flex' : 'block',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '10px'
+        }}>
             {location.pathname !== '/' && (
                 <button className="button-32" style={{width: 'max-content'}} onClick={handleHomeClick}>
                     Home
