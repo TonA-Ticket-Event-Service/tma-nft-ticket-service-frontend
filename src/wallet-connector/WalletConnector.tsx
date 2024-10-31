@@ -1,25 +1,25 @@
 import {
-    TonConnect,
-    // TonConnect,
     TonConnectButton,
     TonConnectUIProvider,
 } from "@tonconnect/ui-react";
-import { FC } from "react";
+import {FC} from "react";
 
-// // ALL MAGIC THERE!
 import "@hot-wallet/sdk/adapter/ton";
 
-const connector = new TonConnect({
-    walletsListSource: "/wallets-v2.json",
-});
+const manifestUrl = 'https://raw.githubusercontent.com/ton-community/tutorials/main/03-client/test/public/tonconnect-manifest.json';
 
 export const WalletConnector: FC = () => {
     return (
-        <TonConnectUIProvider manifestUrl="/tonconnect-manifest.json" connector={connector}>
-            <div className="view">
-                <p>Connect wallet</p>
-                <TonConnectButton />
+        <TonConnectUIProvider manifestUrl={manifestUrl}>
+            <div className="view" style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'relative'
+            }}>
+                <TonConnectButton/>
             </div>
         </TonConnectUIProvider>
+
     );
 };
