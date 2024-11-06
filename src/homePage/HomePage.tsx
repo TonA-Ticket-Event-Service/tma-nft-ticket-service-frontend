@@ -1,11 +1,10 @@
-import WebApp from '@twa-dev/sdk'
 import Navbar from "../navbar/Navbar.tsx";
 import {useNavigate} from "react-router-dom";
 
 const HomePage = () => {
     const navigate = useNavigate();
     const handleCreateTicket = () => {
-        WebApp.showAlert('Simulate create')
+        navigate('/create');
     };
 
     const handleWatchTicket = () => {

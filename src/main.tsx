@@ -16,3 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </React.StrictMode>
 ,
 )
+
+//TODO
+// 1. add test logic for fetch nft
+// 2. think about logic, how to better create tickets
+// 3. discuss with Vakhtanh about integrate smart contract in TMA
+// 4. integrate it
