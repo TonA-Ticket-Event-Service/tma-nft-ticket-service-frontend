@@ -1,13 +1,6 @@
 import React, {useState} from 'react';
 import './CreateComponentModal.css';
 
-
-interface CreateTicketModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    onCreate: (ticket: Ticket) => void;
-}
-
 interface Ticket {
     name: string;
     description: string;
@@ -15,7 +8,7 @@ interface Ticket {
     image: File | null;
 }
 
-const CreateTicketModal: React.FC<CreateTicketModalProps> = () => {
+const CreateTicketModal = () => {
     const [name, setName] = useState<string>('');
     const [description, setDescription] = useState<string>('');
     const [count, setCount] = useState<number>(1);
@@ -69,7 +62,7 @@ const CreateTicketModal: React.FC<CreateTicketModalProps> = () => {
                             type="file"
                             id="image"
                             accept="image/*"
-                            onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
+                            // onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
                         />
                     </div>
 
