@@ -1,19 +1,12 @@
 import React, {useState} from 'react';
 import './CreateComponentModal.css';
 
-interface Ticket {
-    name: string;
-    description: string;
-    count: number;
-    image: File | null;
-}
-
 const CreateTicketModal = () => {
     const [name, setName] = useState<string>('');
     const [description, setDescription] = useState<string>('');
     const [count, setCount] = useState<number>(1);
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = () => {
         console.log("!!!!")
     };
 
