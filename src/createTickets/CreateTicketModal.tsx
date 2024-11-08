@@ -38,18 +38,6 @@ const CreateTicketModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label style={{fontSize: '18px'}} htmlFor="count">Count:</label>
-                        <input
-                            type="number"
-                            id="count"
-                            value={count}
-                            onChange={(e) => setCount(Number(e.target.value))}
-                            min={1}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
                         <label  style={{fontSize: '18px'}} htmlFor="image">Image:</label>
                         <input
                             type="file"
