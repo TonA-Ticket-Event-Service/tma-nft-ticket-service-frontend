@@ -4,7 +4,7 @@ import './CreateComponentModal.css';
 const CreateTicketModal = () => {
     const [name, setName] = useState<string>('');
     const [description, setDescription] = useState<string>('');
-    const [count, setCount] = useState<number>(1);
+    const [count, setCount] = useState<number>(25);
 
     const handleSubmit = () => {
         console.log("!!!!")
@@ -16,7 +16,7 @@ const CreateTicketModal = () => {
                 <h2>Create New Ticket</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="name">Name:</label>
+                        <label style={{fontSize: '18px'}} htmlFor="name">Name:</label>
                         <input
                             type="text"
                             id="name"
@@ -27,7 +27,7 @@ const CreateTicketModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="description">Description:</label>
+                        <label style={{fontSize: '18px'}} htmlFor="description">Description:</label>
                         <input
                             type="text"
                             id="description"
@@ -38,7 +38,7 @@ const CreateTicketModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="count">Count:</label>
+                        <label style={{fontSize: '18px'}} htmlFor="count">Count:</label>
                         <input
                             type="number"
                             id="count"
@@ -50,7 +50,7 @@ const CreateTicketModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="image">Image:</label>
+                        <label  style={{fontSize: '18px'}} htmlFor="image">Image:</label>
                         <input
                             type="file"
                             id="image"
