@@ -4,7 +4,6 @@ import './CreateComponentModal.css';
 const CreateTicketModal = () => {
     const [name, setName] = useState<string>('');
     const [description, setDescription] = useState<string>('');
-    const [count, setCount] = useState<number>(25);
 
     const handleSubmit = () => {
         console.log("!!!!")
