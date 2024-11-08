@@ -13,8 +13,7 @@ const HomePage = () => {
     return (
         <>
             <Navbar/>
-            <h1>NFT HOT EXAMPLE</h1>
-            <span>You can choose</span>
+            <h1>TonA</h1>
             <div style={{
                 display: 'flex',
                 margin: 'auto',
