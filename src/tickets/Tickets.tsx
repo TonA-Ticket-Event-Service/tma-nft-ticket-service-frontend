@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import Navbar from "../navbar/Navbar.tsx";
-import {useTonAddress} from "@tonconnect/ui-react";
+// import {useTonAddress} from "@tonconnect/ui-react";
 import {fetchNFTCollection} from '../utils/FetchUtils.ts';
 
 interface Metadata {
@@ -15,7 +15,7 @@ interface Nft {
 }
 
 const Tickets = () => {
-    const userFriendlyAddress = useTonAddress();
+    // const userFriendlyAddress = useTonAddress();
     const [nftData, setNftData] = useState<Metadata[]>([]);
 
     useEffect(() => {
