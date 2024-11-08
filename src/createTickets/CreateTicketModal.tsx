@@ -16,7 +16,7 @@ const CreateTicketModal = () => {
                 <h2>Create New Ticket</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label style={{fontSize: '18px'}} htmlFor="name">Name:</label>
+                        <label style={{fontSize: '14px'}} htmlFor="name">Name:</label>
                         <input
                             type="text"
                             id="name"
@@ -27,7 +27,7 @@ const CreateTicketModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label style={{fontSize: '18px'}} htmlFor="description">Description:</label>
+                        <label style={{fontSize: '14px'}} htmlFor="description">Description:</label>
                         <input
                             type="text"
                             id="description"
@@ -38,7 +38,7 @@ const CreateTicketModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label  style={{fontSize: '18px'}} htmlFor="image">Image:</label>
+                        <label  style={{fontSize: '14px'}} htmlFor="image">Image:</label>
                         <input
                             type="file"
                             id="image"
@@ -58,3 +58,9 @@ const CreateTicketModal = () => {
 };
 
 export default CreateTicketModal;
+
+
+
+// todo add saving image for ticket in S3
+// show nft's ticket in Tickets.tsx
+//
