@@ -49,7 +49,7 @@ const Tickets = () => {
                     <div style={{
                         display: 'flex',
                         margin: 'auto',
-                        width: 'max-content',
+                        width: '200px',
                         gap: '10px'
                     }}>
                         <ul style={{ listStyle: 'none', padding: 0 }}>
