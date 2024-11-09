@@ -71,7 +71,7 @@ const Tickets = () => {
                 )}
 
                 {selectedImage && (
-                    <div className="modal" onClick={closeModal}>
+                    <div className="modal_ticket" onClick={closeModal}>
                         <div className="modal-content">
                             <span className="close" onClick={closeModal}>&times;</span>
                             <img src={selectedImage} alt="Full-size NFT" style={{ width: '100%', height: 'auto' }} />
