@@ -1,5 +1,5 @@
 export async function fetchNFTCollection() {
-    const url = 'https://tonapi.io/v2/nfts/collections/0%3A120670d2c4cba5fb9a57971b8a30cf3f363f309e4da3b496318ff44e9ec4b6b8/items?limit=40&offset=0';
+    const url = 'https://tonapi.io/v2/nfts/collections/0%3Afffa379518a6c5a6b6520f2114f63bad26a6443aced731a74c6799389e551b3c/items?limit=40&offset=0\n';
 
     try {
         const response = await fetch(url, {
