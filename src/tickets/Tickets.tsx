@@ -49,7 +49,7 @@ const Tickets = () => {
                     <div style={{
                         display: 'flex',
                         margin: 'auto',
-                        width: '200px',
+                        width: '250px',
                         gap: '10px'
                     }}>
                         <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -59,7 +59,7 @@ const Tickets = () => {
                                     <img
                                         src={metadata.image}
                                         alt={metadata.name}
-                                        style={{ width: '200px', height: '200px', cursor: 'pointer' }}
+                                        style={{ width: '250px', height: '250px', cursor: 'pointer' }}
                                         onClick={() => handleImageClick(metadata.image)}
                                     />
                                     <p><strong>Description:</strong> {metadata.description}</p>
