@@ -44,7 +44,6 @@ const Tickets = () => {
         <>
             <Navbar />
             <div>
-                <h3>NFT Collection:</h3>
                 {nftData.length > 0 ? (
                     <div style={{
                         display: 'flex',
