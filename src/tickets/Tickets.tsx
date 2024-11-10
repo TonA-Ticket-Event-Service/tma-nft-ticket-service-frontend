@@ -57,7 +57,7 @@ const Tickets = () => {
                     }}>
                         <ul style={{listStyle: 'none', padding: 0}}>
                             {nftData.map((data) => (
-                                <li key={data.metadata.id} style={{marginBottom: '20px'}}>
+                                <li key={data.metadata.id} style={{marginBottom: '20px', width: '250px'}}>
                                     <h4>{data.metadata.name}</h4>
                                     <img
                                         src={data.metadata.image}
@@ -66,7 +66,9 @@ const Tickets = () => {
                                         onClick={() => handleImageClick(data.metadata.image)}
                                     />
                                     <p><strong>Description:</strong> {data.metadata.description}</p>
-                                    <p><strong>Owner: </strong> {data.owner.address}</p>
+                                    <p style={{width: '250px'}}>
+                                        <strong>Owner: </strong> {`${data.owner.address.substring(0, 5)}...${data.owner.address.substring(data.owner.address.length - 5)}`}
+                                    </p>
                                 </li>
                             ))}
                         </ul>
