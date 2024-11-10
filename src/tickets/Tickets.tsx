@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Navbar from "../navbar/Navbar.tsx";
-import { fetchNFTCollection } from '../utils/FetchUtils.ts';
+import {fetchNFTCollection} from '../utils/FetchUtils.ts';
 import './Ticket.css'
 
 interface Metadata {
@@ -42,7 +42,7 @@ const Tickets = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <div>
                 {nftData.length > 0 ? (
                     <div style={{
@@ -51,14 +51,14 @@ const Tickets = () => {
                         width: '250px',
                         gap: '10px'
                     }}>
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
+                        <ul style={{listStyle: 'none', padding: 0}}>
                             {nftData.map((metadata) => (
-                                <li key={metadata.id} style={{ marginBottom: '20px' }}>
+                                <li key={metadata.id} style={{marginBottom: '20px'}}>
                                     <h4>{metadata.name}</h4>
                                     <img
                                         src={metadata.image}
                                         alt={metadata.name}
-                                        style={{ width: '250px', height: '250px', cursor: 'pointer' }}
+                                        style={{width: '250px', height: '250px', cursor: 'pointer'}}
                                         onClick={() => handleImageClick(metadata.image)}
                                     />
                                     <p><strong>Description:</strong> {metadata.description}</p>
@@ -74,7 +74,7 @@ const Tickets = () => {
                     <div className="modal_ticket" onClick={closeModal}>
                         <div className="modal-content">
                             <span className="close" onClick={closeModal}>&times;</span>
-                            <img src={selectedImage} alt="Full-size NFT" style={{ width: '100%', height: 'auto' }} />
+                            <img src={selectedImage} alt="Full-size NFT" style={{width: '100%', height: 'auto'}}/>
                         </div>
                     </div>
                 )}
