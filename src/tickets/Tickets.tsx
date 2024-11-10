@@ -10,12 +10,17 @@ interface Metadata {
     image: string;
 }
 
+interface Owner {
+    address: string
+}
+
 interface NftItem {
     metadata: Metadata;
+    owner: Owner;
 }
 
 const Tickets = () => {
-    const [nftData, setNftData] = useState<Metadata[]>([]);
+    const [nftData, setNftData] = useState<NftItem[]>([]);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     useEffect(() => {
@@ -23,8 +28,7 @@ const Tickets = () => {
             try {
                 const data = await fetchNFTCollection();
                 const nftItems: NftItem[] = data.nft_items;
-                const metadataList = nftItems.map((item: NftItem) => item.metadata);
-                setNftData(metadataList);
+                setNftData(nftItems);
             } catch (error) {
                 console.error('Error fetching NFT data:', error);
             }
@@ -52,16 +56,17 @@ const Tickets = () => {
                         gap: '10px'
                     }}>
                         <ul style={{listStyle: 'none', padding: 0}}>
-                            {nftData.map((metadata) => (
-                                <li key={metadata.id} style={{marginBottom: '20px'}}>
-                                    <h4>{metadata.name}</h4>
+                            {nftData.map((data) => (
+                                <li key={data.metadata.id} style={{marginBottom: '20px'}}>
+                                    <h4>{data.metadata.name}</h4>
                                     <img
-                                        src={metadata.image}
-                                        alt={metadata.name}
+                                        src={data.metadata.image}
+                                        alt={data.metadata.name}
                                         style={{width: '250px', height: '250px', cursor: 'pointer'}}
-                                        onClick={() => handleImageClick(metadata.image)}
+                                        onClick={() => handleImageClick(data.metadata.image)}
                                     />
-                                    <p><strong>Description:</strong> {metadata.description}</p>
+                                    <p><strong>Description:</strong> {data.metadata.description}</p>
+                                    <p><strong>Owner: </strong> {data.owner.address}</p>
                                 </li>
                             ))}
                         </ul>
