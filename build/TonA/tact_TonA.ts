@@ -18,7 +18,7 @@ import {
     ABIReceiver,
     TupleBuilder,
     DictionaryValue
-} from '@ton/core';
+} from 'ton-core';
 
 export type StateInit = {
     $$type: 'StateInit';
@@ -1949,7 +1949,7 @@ export class TonA implements Contract {
         errors: TonA_errors,
     };
     
-    private constructor(address: Address, init?: { code: Cell, data: Cell }) {
+    public constructor(address: Address, init?: { code: Cell, data: Cell }) {
         this.address = address;
         this.init = init;
     }
@@ -1991,7 +1991,7 @@ export class TonA implements Contract {
         return result;
     }
     
-    async getState(provider: ContractProvider) {
+    public async getState(provider: ContractProvider) {
         let builder = new TupleBuilder();
         let source = (await provider.get('state', builder.build())).stack;
         const result = loadGetterTupleTonAState(source);

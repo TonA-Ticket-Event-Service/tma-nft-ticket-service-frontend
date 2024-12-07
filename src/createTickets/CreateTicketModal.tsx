@@ -1,14 +1,20 @@
 import {useState} from 'react';
 import './CreateComponentModal.css';
 import Navbar from "../navbar/Navbar.tsx";
+import {useTonAddress} from "@tonconnect/ui-react";
+import CreateButton from "./CreateButton.tsx";
 
 const CreateTicketModal = () => {
     const [name, setName] = useState<string>('');
     const [description, setDescription] = useState<string>('');
+    const [image, setImage] = useState<File | null>(null);
+    const userFriendlyAddress = useTonAddress();
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         console.log("!!!!")
     };
+
 
     return (
         <>
@@ -46,13 +52,11 @@ const CreateTicketModal = () => {
                                 id="image"
                                 accept="image/*"
                                 required
-                                // onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
+                                onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
                             />
                         </div>
 
-                        <div className="form-group button-group">
-                            <button className="button-32" type="submit">Create Ticket</button>
-                        </div>
+                        <CreateButton address={userFriendlyAddress}/>
                     </form>
                 </div>
             </div>
@@ -61,8 +65,3 @@ const CreateTicketModal = () => {
 };
 
 export default CreateTicketModal;
-
-
-// todo add saving image for ticket in S3
-// show nft's ticket in Tickets.tsx
-//

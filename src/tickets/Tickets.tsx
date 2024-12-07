@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Navbar from "../navbar/Navbar.tsx";
 import {fetchNFTCollection} from '../utils/FetchUtils.ts';
 import './Ticket.css'
+import {useGetNftAddress} from "../utils/GetNftAddress.ts";
 
 interface Metadata {
     description: string;
@@ -22,6 +23,8 @@ interface NftItem {
 const Tickets = () => {
     const [nftData, setNftData] = useState<NftItem[]>([]);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const {getNftAddress} = useGetNftAddress();
+    getNftAddress()?.then(data => console.log(data))
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,6 +50,7 @@ const Tickets = () => {
     return (
         <>
             <Navbar/>
+            //todo
             <div>
                 {nftData.length > 0 ? (
                     <div style={{
