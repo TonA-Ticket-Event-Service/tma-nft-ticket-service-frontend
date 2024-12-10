@@ -19,7 +19,7 @@ export function useJettonContract(address: string) {
     const jettonContract = useAsyncInitialize<OpenedContract<EventNftCollection> | undefined>(async () => {
         if (!client || !wallet) return undefined;
 
-        const contract = EventNftCollection.fromAddress(Address.parse("EQD_-jeVGKbFprZSDyEU9jutJqZEOs7XMadMZ5k4nlUbPBsl"));
+        const contract = EventNftCollection.fromAddress(Address.parse("EQD1530L5P_O8_WkP46m25HPsHp1vVChmrbrsCoVA-Bq9YOI"));
 
         return client.open(contract) as OpenedContract<EventNftCollection>;
     }, [client, wallet]);
@@ -27,11 +27,11 @@ export function useJettonContract(address: string) {
     console.log(address)
     const to = Address.parse(address);
 
-    const ticketContentLink = 'https://raw.githubusercontent.com/TonA-Ticket-Event-Service/images/refs/heads/main/event.json'
+    const ticketContentLink = 'https://raw.githubusercontent.com/TonA-Ticket-Event-Service/images/refs/heads/main/Grishko13122024.json'
     const ticketContentOnchainData: Cell = encodeOffChainContent(ticketContentLink)
 
     return {
-        jettonWalletAddress: "EQD_-jeVGKbFprZSDyEU9jutJqZEOs7XMadMZ5k4nlUbPBsl",
+        jettonWalletAddress: "EQD1530L5P_O8_WkP46m25HPsHp1vVChmrbrsCoVA-Bq9YOI",
         mint: () => {
             const message: Mint = {
                 $$type: 'Mint',
